@@ -769,7 +769,7 @@ body.sdp-font-lg {
    11. STEPPER
 ========================================================= */
 
-.steps {
+/* .steps {
     position: relative;
 
     width: 100%;
@@ -876,7 +876,7 @@ body.sdp-font-lg {
 
 .step.active .step-text {
     color: var(--text);
-}
+} */
 
 
 /* =========================================================
@@ -3772,6 +3772,607 @@ body.sdp-font-lg {
   letter-spacing: 1px;
 }
 
+
+
+
+
+
+
+
+/* =========================================================
+   STEPPER APPEARANCE SETTINGS
+========================================================= */
+
+.sdp-setting-panel {
+    padding: 10px 12px 14px;
+}
+
+.sdp-setting-title {
+    margin: 12px 0 8px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    color: var(--text-3);
+}
+
+.sdp-theme-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.sdp-bg-theme,
+.sdp-step-theme {
+    position: relative;
+
+    min-height: 42px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    transition: .2s ease;
+}
+
+.sdp-bg-theme span,
+.sdp-step-theme span {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 1px 4px rgba(15,23,42,.15);
+}
+
+.sdp-bg-theme:hover,
+.sdp-step-theme:hover,
+.sdp-bg-theme.active,
+.sdp-step-theme.active {
+    transform: translateY(-1px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 2px var(--primary-soft);
+}
+
+
+/* =========================================================
+   BACKGROUND PREVIEW
+========================================================= */
+
+.bg-preview {
+    width: 24px !important;
+    height: 24px !important;
+
+    border-radius: 7px !important;
+}
+
+.bg-dots {
+    background-color: #f5f3ff;
+
+    background-image:
+        radial-gradient(#a78bfa 1px, transparent 1px);
+
+    background-size: 6px 6px;
+}
+
+.bg-grid {
+    background-color: #f8fafc;
+
+    background-image:
+        linear-gradient(#cbd5e1 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px);
+
+    background-size: 6px 6px;
+}
+
+.bg-gradient {
+    background:
+        linear-gradient(
+            135deg,
+            #fdf2f8,
+            #eff6ff,
+            #ecfdf5
+        );
+}
+
+
+/* =========================================================
+   OPTION GRID
+========================================================= */
+
+.sdp-option-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+.sdp-progress-btn,
+.sdp-shape-btn {
+
+    min-height: 48px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    transition: .2s ease;
+}
+
+.sdp-progress-btn:hover,
+.sdp-shape-btn:hover,
+.sdp-progress-btn.active,
+.sdp-shape-btn.active {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 2px var(--primary-soft);
+}
+
+.sdp-option-grid small {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--text-3);
+}
+
+
+/* =========================================================
+   PROGRESS PREVIEW
+========================================================= */
+
+.progress-preview {
+
+    width: 70px;
+    height: 6px;
+
+    border-radius: 999px;
+
+    display: block;
+}
+
+.progress-preview.gradient {
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            #93c5fd
+        );
+}
+
+.progress-preview.solid {
+    background: var(--primary);
+}
+
+.progress-preview.neon {
+    background: var(--primary);
+
+    box-shadow:
+        0 0 5px var(--primary),
+        0 0 12px var(--primary);
+}
+
+.progress-preview.glass {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8),
+            var(--primary)
+        );
+
+    border: 1px solid rgba(255,255,255,.8);
+}
+
+.progress-preview.dashed {
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--primary) 0 10px,
+            transparent 10px 15px
+        );
+}
+
+.progress-preview.dots {
+
+    height: 8px;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--primary) 3px,
+            transparent 3.5px
+        );
+
+    background-size: 12px 8px;
+}
+
+
+/* =========================================================
+   SHAPE PREVIEW
+========================================================= */
+
+.shape-preview {
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--primary);
+
+    display: block;
+
+    box-shadow:
+        0 3px 8px var(--primary-glow);
+}
+
+.shape-preview.circle {
+    border-radius: 50%;
+}
+
+.shape-preview.square {
+    border-radius: 6px;
+}
+
+.shape-preview.pill {
+    width: 34px;
+    border-radius: 999px;
+}
+
+.shape-preview.glass {
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.8),
+            var(--primary)
+        );
+
+    border:
+        2px solid rgba(255,255,255,.8);
+}
+
+
+/* =========================================================
+   EMOJI
+========================================================= */
+
+.sdp-emoji-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+.sdp-emoji-theme {
+
+    min-height: 38px;
+
+    border: 1px solid var(--line);
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .2s ease;
+}
+
+.sdp-emoji-theme:hover,
+.sdp-emoji-theme.active {
+
+    border-color: var(--primary);
+
+    background:
+        var(--primary-soft);
+
+    box-shadow:
+        0 0 0 2px var(--primary-soft);
+}
+
+
+/* =========================================================
+   FONT
+========================================================= */
+
+.sdp-font-row,
+.sdp-animation-row {
+
+    display: flex;
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+.sdp-font-btn,
+.sdp-animation-btn {
+
+    flex: 1;
+
+    min-height: 34px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: var(--text-2);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.sdp-font-btn.active,
+.sdp-animation-btn.active {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 3px 8px var(--primary-glow);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.sdp-reset-btn {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--line);
+
+    background: #f8fafc;
+
+    color: var(--text-2);
+
+    font-weight: 800;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.sdp-reset-btn:hover {
+
+    background: #fff;
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   STEPPER THEME VARIABLES
+========================================================= */
+
+#bookingStepper {
+
+    --step-progress: 0%;
+
+    --step-radius: 50%;
+
+    --step-font-scale: 1;
+
+    --step-animation: running;
+
+}
+
+
+/* =========================================================
+   STEP SHAPE
+========================================================= */
+
+#bookingStepper[data-shape="square"]
+.step-circle {
+
+    border-radius: 8px;
+}
+
+#bookingStepper[data-shape="pill"]
+.step-circle {
+
+    width: 48px;
+
+    border-radius: 999px;
+}
+
+#bookingStepper[data-shape="glass"]
+.step-circle {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.9),
+            var(--primary-soft)
+        );
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* =========================================================
+   PROGRESS TYPES
+========================================================= */
+
+#bookingStepper[data-progress="solid"]::after {
+
+    background:
+        var(--primary);
+
+    animation: none;
+}
+
+#bookingStepper[data-progress="neon"]::after {
+
+    background:
+        var(--primary);
+
+    box-shadow:
+        0 0 5px var(--primary),
+        0 0 12px var(--primary),
+        0 0 22px var(--primary);
+
+    animation: none;
+}
+
+#bookingStepper[data-progress="glass"]::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.55),
+            var(--primary)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.7);
+
+    backdrop-filter:
+        blur(5px);
+
+    animation: none;
+}
+
+#bookingStepper[data-progress="dashed"]::after {
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--primary) 0 12px,
+            transparent 12px 18px
+        );
+
+    animation: none;
+}
+
+#bookingStepper[data-progress="dots"]::after {
+
+    height: 8px;
+
+    top: 16px;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--primary) 3px,
+            transparent 3.5px
+        );
+
+    background-size: 13px 8px;
+
+    box-shadow: none;
+
+    animation: none;
+}
+
+
+/* =========================================================
+   ANIMATION OFF
+========================================================= */
+
+#bookingStepper[data-animation="off"] *,
+#bookingStepper[data-animation="off"]::after,
+#bookingStepper[data-animation="off"]::before {
+
+    animation: none !important;
+
+    transition-duration: .15s !important;
+}
+
+
+/* =========================================================
+   FONT SCALE
+========================================================= */
+
+#bookingStepper[data-font="90"] .step-text {
+    transform: scale(.9);
+}
+
+#bookingStepper[data-font="115"] .step-text {
+    transform: scale(1.15);
+}
+
+
+/* =========================================================
+   MOBILE SETTINGS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .sdp-theme-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sdp-option-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sdp-emoji-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
 </style>
 
 
@@ -3818,7 +4419,7 @@ body.sdp-font-lg {
             </svg>
         </button>
 
-<div id="headerDropdownMenu" class="header-dropdown-menu">
+<!-- <div id="headerDropdownMenu" class="header-dropdown-menu">
     <div class="dropdown-header">⚙️ ตั้งค่าการแสดงผล</div>
     <div class="dropdown-divider"></div>
 
@@ -3853,8 +4454,974 @@ body.sdp-font-lg {
         🔄 คืนค่าเริ่มต้น
       </button>
     </div>
-</div>
+</div> -->
         
+
+<div id="headerDropdownMenu" class="header-dropdown-menu">
+
+    <div class="dropdown-header">
+        ⚙️ ตั้งค่าการแสดงผล
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+    <div class="sdp-setting-panel">
+
+        <!-- =====================================================
+             BACKGROUND
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            🖼️ พื้นหลัง
+        </div>
+
+        <div class="sdp-theme-grid">
+
+            <button class="sdp-bg-theme active"
+                    data-bg="#f7f8fc"
+                    data-bg-image="none">
+                <span style="background:#f7f8fc;"></span>
+                ☁️
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#fff5f6"
+                    data-bg-image="none">
+                <span style="background:#fff5f6;"></span>
+                🌸
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#f0fdf4"
+                    data-bg-image="none">
+                <span style="background:#f0fdf4;"></span>
+                🌿
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#eff6ff"
+                    data-bg-image="none">
+                <span style="background:#eff6ff;"></span>
+                💧
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#fffbeb"
+                    data-bg-image="none">
+                <span style="background:#fffbeb;"></span>
+                ☀️
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#f5f3ff"
+                    data-bg-image="dots">
+                <span class="bg-preview bg-dots"></span>
+                🔵
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#f8fafc"
+                    data-bg-image="grid">
+                <span class="bg-preview bg-grid"></span>
+                ▦
+            </button>
+
+            <button class="sdp-bg-theme"
+                    data-bg="#f8fafc"
+                    data-bg-image="gradient">
+                <span class="bg-preview bg-gradient"></span>
+                🌈
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             STEPPER COLOR
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            🎨 สี Stepper
+        </div>
+
+        <div class="sdp-theme-grid">
+
+            <button class="sdp-step-theme active"
+                    data-primary="#f43f5e"
+                    data-soft="#fff1f2"
+                    data-glow="rgba(244,63,94,.28)">
+                <span style="background:#f43f5e;"></span>
+                🌹
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#2563eb"
+                    data-soft="#eff6ff"
+                    data-glow="rgba(37,99,235,.28)">
+                <span style="background:#2563eb;"></span>
+                💙
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#16a34a"
+                    data-soft="#f0fdf4"
+                    data-glow="rgba(22,163,74,.28)">
+                <span style="background:#16a34a;"></span>
+                💚
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#9333ea"
+                    data-soft="#faf5ff"
+                    data-glow="rgba(147,51,234,.28)">
+                <span style="background:#9333ea;"></span>
+                💜
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#d97706"
+                    data-soft="#fffbeb"
+                    data-glow="rgba(217,119,6,.28)">
+                <span style="background:#d97706;"></span>
+                🧡
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#0891b2"
+                    data-soft="#ecfeff"
+                    data-glow="rgba(8,145,178,.28)">
+                <span style="background:#0891b2;"></span>
+                🩵
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#0f766e"
+                    data-soft="#f0fdfa"
+                    data-glow="rgba(15,118,110,.28)">
+                <span style="background:#0f766e;"></span>
+                🩺
+            </button>
+
+            <button class="sdp-step-theme"
+                    data-primary="#475569"
+                    data-soft="#f1f5f9"
+                    data-glow="rgba(71,85,105,.28)">
+                <span style="background:#475569;"></span>
+                🖤
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             PROGRESS STYLE
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            📊 รูปแบบ Progress Bar
+        </div>
+
+        <div class="sdp-option-grid">
+
+            <button class="sdp-progress-btn active"
+                    data-progress="gradient">
+                <span class="progress-preview gradient"></span>
+                <small>Gradient</small>
+            </button>
+
+            <button class="sdp-progress-btn"
+                    data-progress="solid">
+                <span class="progress-preview solid"></span>
+                <small>Solid</small>
+            </button>
+
+            <button class="sdp-progress-btn"
+                    data-progress="neon">
+                <span class="progress-preview neon"></span>
+                <small>Neon</small>
+            </button>
+
+            <button class="sdp-progress-btn"
+                    data-progress="glass">
+                <span class="progress-preview glass"></span>
+                <small>Glass</small>
+            </button>
+
+            <button class="sdp-progress-btn"
+                    data-progress="dashed">
+                <span class="progress-preview dashed"></span>
+                <small>Dashed</small>
+            </button>
+
+            <button class="sdp-progress-btn"
+                    data-progress="dots">
+                <span class="progress-preview dots"></span>
+                <small>Dots</small>
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             STEP SHAPE
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            🔵 รูปแบบจุด Step
+        </div>
+
+        <div class="sdp-option-grid">
+
+            <button class="sdp-shape-btn active"
+                    data-shape="circle">
+                <span class="shape-preview circle"></span>
+                <small>Circle</small>
+            </button>
+
+            <button class="sdp-shape-btn"
+                    data-shape="square">
+                <span class="shape-preview square"></span>
+                <small>Square</small>
+            </button>
+
+            <button class="sdp-shape-btn"
+                    data-shape="pill">
+                <span class="shape-preview pill"></span>
+                <small>Pill</small>
+            </button>
+
+            <button class="sdp-shape-btn"
+                    data-shape="glass">
+                <span class="shape-preview glass"></span>
+                <small>Glass</small>
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             EMOJI
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            😀 ชุดไอคอน Step
+        </div>
+
+        <div class="sdp-emoji-grid">
+
+            <button class="sdp-emoji-theme active"
+                    data-emojis='["🗓️","📋","📝","✅"]'>
+                🗓️ 📋 📝 ✅
+            </button>
+
+            <button class="sdp-emoji-theme"
+                    data-emojis='["📅","⏰","✍️","🎉"]'>
+                📅 ⏰ ✍️ 🎉
+            </button>
+
+            <button class="sdp-emoji-theme"
+                    data-emojis='["🏥","🪑","🩸","❤️"]'>
+                🏥 🪑 🩸 ❤️
+            </button>
+
+            <button class="sdp-emoji-theme"
+                    data-emojis='["1️⃣","2️⃣","3️⃣","4️⃣"]'>
+                1️⃣ 2️⃣ 3️⃣ 4️⃣
+            </button>
+
+            <button class="sdp-emoji-theme"
+                    data-emojis='["🌱","💧","🌿","🌳"]'>
+                🌱 💧 🌿 🌳
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             FONT SIZE
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            🔠 ขนาดตัวอักษร
+        </div>
+
+        <div class="sdp-font-row">
+
+            <button class="sdp-font-btn"
+                    data-size="90">
+                เล็ก
+            </button>
+
+            <button class="sdp-font-btn active"
+                    data-size="100">
+                ปกติ
+            </button>
+
+            <button class="sdp-font-btn"
+                    data-size="115">
+                ใหญ่
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ANIMATION
+        ====================================================== -->
+
+        <div class="sdp-setting-title">
+            ✨ Animation
+        </div>
+
+        <div class="sdp-animation-row">
+
+            <button class="sdp-animation-btn active"
+                    data-animation="on">
+                ✨ เปิด
+            </button>
+
+            <button class="sdp-animation-btn"
+                    data-animation="off">
+                💤 ปิด
+            </button>
+
+        </div>
+
+
+        <!-- RESET -->
+
+        <button type="button"
+                onclick="resetSdpAppearance()"
+                class="sdp-reset-btn">
+            🔄 คืนค่าการแสดงผลเริ่มต้น
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* =========================================================
+   STEPPER APPEARANCE SETTINGS
+========================================================= */
+
+(function () {
+
+    const stepper =
+        document.getElementById("bookingStepper");
+
+    if (!stepper) return;
+
+
+    /* =====================================================
+       DEFAULT
+    ===================================================== */
+
+    const DEFAULT_APPEARANCE = {
+
+        bg: "#f7f8fc",
+
+        bgImage: "none",
+
+        primary: "#f43f5e",
+
+        soft: "#fff1f2",
+
+        glow: "rgba(244,63,94,.28)",
+
+        progress: "gradient",
+
+        shape: "circle",
+
+        font: "100",
+
+        animation: "on",
+
+        emojis: [
+            "🗓️",
+            "📋",
+            "📝",
+            "✅"
+        ]
+
+    };
+
+
+    /* =====================================================
+       APPLY BACKGROUND
+    ===================================================== */
+
+    function applyBackground(bg, image) {
+
+        document.body.style.setProperty(
+            "--sdp-bg-custom",
+            bg
+        );
+
+        document.body.style.backgroundColor = bg;
+
+
+        document.body.classList.remove(
+            "sdp-bg-dots",
+            "sdp-bg-grid",
+            "sdp-bg-gradient"
+        );
+
+
+        if (image === "dots") {
+
+            document.body.classList.add(
+                "sdp-bg-dots"
+            );
+
+        }
+
+        if (image === "grid") {
+
+            document.body.classList.add(
+                "sdp-bg-grid"
+            );
+
+        }
+
+        if (image === "gradient") {
+
+            document.body.classList.add(
+                "sdp-bg-gradient"
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       APPLY STEPPER COLOR
+    ===================================================== */
+
+    function applyColor(
+        primary,
+        soft,
+        glow
+    ) {
+
+        stepper.style.setProperty(
+            "--primary",
+            primary
+        );
+
+        stepper.style.setProperty(
+            "--primary-soft",
+            soft
+        );
+
+        stepper.style.setProperty(
+            "--primary-glow",
+            glow
+        );
+
+    }
+
+
+    /* =====================================================
+       APPLY PROGRESS
+    ===================================================== */
+
+    function applyProgress(type) {
+
+        stepper.dataset.progress = type;
+
+    }
+
+
+    /* =====================================================
+       APPLY SHAPE
+    ===================================================== */
+
+    function applyShape(type) {
+
+        stepper.dataset.shape = type;
+
+    }
+
+
+    /* =====================================================
+       APPLY FONT
+    ===================================================== */
+
+    function applyFont(size) {
+
+        stepper.dataset.font = size;
+
+    }
+
+
+    /* =====================================================
+       APPLY ANIMATION
+    ===================================================== */
+
+    function applyAnimation(type) {
+
+        stepper.dataset.animation = type;
+
+    }
+
+
+    /* =====================================================
+       APPLY EMOJI
+    ===================================================== */
+
+    function applyEmoji(emojis) {
+
+        stepper.dataset.emojis =
+            JSON.stringify(emojis);
+
+        const steps =
+            stepper.querySelectorAll(".step");
+
+        steps.forEach((step, index) => {
+
+            const circle =
+                step.querySelector(".step-circle");
+
+            if (!circle) return;
+
+            if (
+                step.classList.contains("completed")
+            ) {
+
+                circle.textContent = "✓";
+
+            } else {
+
+                circle.textContent =
+                    emojis[index] || "";
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       BACKGROUND CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-bg-theme")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-bg-theme")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+
+                    applyBackground(
+
+                        this.dataset.bg,
+
+                        this.dataset.bgImage
+
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       COLOR CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-step-theme")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-step-theme")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+
+                    applyColor(
+
+                        this.dataset.primary,
+
+                        this.dataset.soft,
+
+                        this.dataset.glow
+
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       PROGRESS CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-progress-btn")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-progress-btn")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+                    applyProgress(
+                        this.dataset.progress
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       SHAPE CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-shape-btn")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-shape-btn")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+                    applyShape(
+                        this.dataset.shape
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       EMOJI CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-emoji-theme")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-emoji-theme")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+
+                    let emojis;
+
+                    try {
+
+                        emojis =
+                            JSON.parse(
+                                this.dataset.emojis
+                            );
+
+                    } catch (e) {
+
+                        emojis =
+                            DEFAULT_APPEARANCE.emojis;
+
+                    }
+
+
+                    applyEmoji(emojis);
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       FONT CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-font-btn")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-font-btn")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+                    applyFont(
+                        this.dataset.size
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       ANIMATION CLICK
+    ===================================================== */
+
+    document
+        .querySelectorAll(".sdp-animation-btn")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(".sdp-animation-btn")
+                        .forEach(x =>
+                            x.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+                    applyAnimation(
+                        this.dataset.animation
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    window.resetSdpAppearance =
+        function () {
+
+            applyBackground(
+                DEFAULT_APPEARANCE.bg,
+                DEFAULT_APPEARANCE.bgImage
+            );
+
+            applyColor(
+                DEFAULT_APPEARANCE.primary,
+                DEFAULT_APPEARANCE.soft,
+                DEFAULT_APPEARANCE.glow
+            );
+
+            applyProgress(
+                DEFAULT_APPEARANCE.progress
+            );
+
+            applyShape(
+                DEFAULT_APPEARANCE.shape
+            );
+
+            applyFont(
+                DEFAULT_APPEARANCE.font
+            );
+
+            applyAnimation(
+                DEFAULT_APPEARANCE.animation
+            );
+
+            applyEmoji(
+                DEFAULT_APPEARANCE.emojis
+            );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-bg-theme"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.bg ===
+                        DEFAULT_APPEARANCE.bg &&
+                        x.dataset.bgImage ===
+                        DEFAULT_APPEARANCE.bgImage
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-step-theme"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.primary ===
+                        DEFAULT_APPEARANCE.primary
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-progress-btn"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.progress ===
+                        DEFAULT_APPEARANCE.progress
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-shape-btn"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.shape ===
+                        DEFAULT_APPEARANCE.shape
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-font-btn"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.size ===
+                        DEFAULT_APPEARANCE.font
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-animation-btn"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.animation ===
+                        DEFAULT_APPEARANCE.animation
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".sdp-emoji-theme"
+                )
+                .forEach(x =>
+                    x.classList.toggle(
+                        "active",
+                        x.dataset.emojis ===
+                        JSON.stringify(
+                            DEFAULT_APPEARANCE.emojis
+                        )
+                    )
+                );
+
+        };
+
+
+    /* =====================================================
+       INITIAL
+    ===================================================== */
+
+    applyBackground(
+        DEFAULT_APPEARANCE.bg,
+        DEFAULT_APPEARANCE.bgImage
+    );
+
+    applyColor(
+        DEFAULT_APPEARANCE.primary,
+        DEFAULT_APPEARANCE.soft,
+        DEFAULT_APPEARANCE.glow
+    );
+
+    applyProgress(
+        DEFAULT_APPEARANCE.progress
+    );
+
+    applyShape(
+        DEFAULT_APPEARANCE.shape
+    );
+
+    applyFont(
+        DEFAULT_APPEARANCE.font
+    );
+
+    applyAnimation(
+        DEFAULT_APPEARANCE.animation
+    );
+
+    applyEmoji(
+        DEFAULT_APPEARANCE.emojis
+    );
+
+})();
+
+</script>
+
+
+
+
+
     </div>
 </header>
 
@@ -3892,19 +5459,643 @@ body.sdp-font-lg {
 <!-- ======================================================
      STEPS
 ====================================================== -->
-<section class="steps">
-    <div class="step" id="step1"><div class="step-circle">🗓️</div><div class="step-text">เลือกวันและเวลา</div></div>
-    <div class="step" id="step2"><div class="step-circle">📋</div><div class="step-text">กรอกข้อมูล</div></div>
+<!-- <section class="steps">
+    <div class="step" id="step1"><div class="step-circle">🗓️</div><div class="step-text">เลือกวันเข้าบริจาค</div></div>
+    <div class="step" id="step2"><div class="step-circle">📋</div><div class="step-text">เลือกช่วงเวลาและเก้าอี้</div></div>
     <div class="step" id="step3"><div class="step-circle">📝</div><div class="step-text">ยืนยันการจอง</div></div>
     <div class="step" id="step4"><div class="step-circle">✅</div><div class="step-text">เสร็จสิ้น</div></div>
-</section>
-<script>
+</section> -->
+<!-- <script>
   function setStep(n) {
   for (let i = 1; i <= 4; i++) {
     document.getElementById('step' + i).classList.toggle('active', i === n);
   }
 }
-  </script>
+  </script> -->
+
+<!-- =========================================================
+     MODERN BOOKING STEPPER
+========================================================= -->
+
+<style>
+
+/* =========================================================
+   11. PREMIUM PROGRESS STEPPER
+========================================================= */
+
+.steps {
+    --step-progress: 0%;
+
+    position: relative;
+    width: 100%;
+
+    margin: 8px 0 30px;
+    padding: 0 4px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   PROGRESS TRACK
+========================================================= */
+
+.steps::before {
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+    left: 30px;
+    right: 30px;
+
+    height: 6px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #eef2f7,
+            #e7edf4
+        );
+
+    box-shadow:
+        inset 0 1px 2px rgba(15, 23, 42, .06);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   PROGRESS FILL
+========================================================= */
+
+.steps::after {
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+    left: 30px;
+
+    width: var(--step-progress);
+
+    max-width: calc(100% - 60px);
+
+    height: 6px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            color-mix(
+                in srgb,
+                var(--primary) 82%,
+                #ffffff
+            )
+        );
+
+    box-shadow:
+        0 2px 8px var(--primary-glow);
+
+    z-index: 1;
+
+    transition:
+        width .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.step {
+    position: relative;
+
+    z-index: 3;
+
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 2px;
+}
+
+
+/* =========================================================
+   CIRCLE
+========================================================= */
+
+.step-circle {
+
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7f9fc
+        );
+
+    color: var(--text-3);
+
+    border:
+        3px solid #ffffff;
+
+    box-shadow:
+        0 0 0 1px #dfe6ee,
+        0 5px 14px rgba(15, 23, 42, .08);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        all .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* =========================================================
+   ACTIVE CIRCLE
+========================================================= */
+
+.step.active .step-circle {
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary)
+        );
+
+    color: #ffffff;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 0 5px var(--primary-soft),
+        0 7px 20px var(--primary-glow);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   ACTIVE RING
+========================================================= */
+
+.step.active .step-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -6px;
+
+    border-radius: 50%;
+
+    border:
+        1.5px solid var(--primary);
+
+    opacity: .25;
+
+    animation:
+        stepRing 2s ease-out infinite;
+}
+
+
+@keyframes stepRing {
+
+    0% {
+        transform: scale(.92);
+        opacity: .3;
+    }
+
+    70% {
+        transform: scale(1.12);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.12);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   COMPLETED
+========================================================= */
+
+.step.completed .step-circle {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ecfdf5,
+            #dff8ed
+        );
+
+    color:
+        #059669;
+
+    border-color:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 1px #a7f3d0,
+        0 4px 12px rgba(5, 150, 105, .12);
+
+    transform:
+        scale(1);
+}
+
+
+/* =========================================================
+   COMPLETED CHECK
+========================================================= */
+
+.step.completed .step-circle {
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.step-text {
+
+    max-width: 82px;
+
+    margin-top: 9px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+
+    color:
+        var(--text-3);
+
+    font-weight: 700;
+
+    transition:
+        all .3s ease;
+}
+
+
+/* ACTIVE TEXT */
+
+.step.active .step-text {
+
+    color:
+        var(--text);
+
+    font-weight: 800;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* COMPLETED TEXT */
+
+.step.completed .step-text {
+
+    color:
+        #047857;
+}
+
+
+/* =========================================================
+   SUBTLE SHINE ON PROGRESS
+========================================================= */
+
+.steps::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary) 0%,
+            var(--primary) 70%,
+            rgba(255,255,255,.85) 85%,
+            var(--primary) 100%
+        );
+
+    background-size:
+        200% 100%;
+
+    animation:
+        progressShine 3s linear infinite;
+}
+
+
+@keyframes progressShine {
+
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .steps {
+
+        margin-top: 6px;
+        margin-bottom: 27px;
+
+        padding: 0 2px;
+    }
+
+
+    .steps::before {
+
+        top: 16px;
+
+        left: 28px;
+        right: 28px;
+
+        height: 5px;
+    }
+
+
+    .steps::after {
+
+        top: 16px;
+        left: 28px;
+
+        max-width:
+            calc(100% - 56px);
+
+        height: 5px;
+    }
+
+
+    .step-circle {
+
+        width: 37px;
+        height: 37px;
+
+        font-size: 13px;
+    }
+
+
+    .step.active .step-circle {
+
+        transform:
+            scale(1.06);
+    }
+
+
+    .step-text {
+
+        max-width: 74px;
+
+        margin-top: 8px;
+
+        font-size: 8px;
+
+        line-height: 1.3;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .steps::before {
+
+        top: 15px;
+
+        left: 26px;
+        right: 26px;
+
+        height: 4px;
+    }
+
+
+    .steps::after {
+
+        top: 15px;
+        left: 26px;
+
+        max-width:
+            calc(100% - 52px);
+
+        height: 4px;
+    }
+
+
+    .step-circle {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+    }
+
+
+    .step-text {
+
+        max-width: 64px;
+
+        font-size: 7.5px;
+    }
+}
+
+</style>
+
+<!-- =========================================================
+     HTML
+========================================================= -->
+
+<section class="steps" id="bookingStepper">
+
+    <div class="step active" id="step1">
+
+        <div class="step-circle">
+            🗓️
+        </div>
+
+        <div class="step-text">
+            เลือกวันเข้าบริจาค
+        </div>
+
+    </div>
+
+
+    <div class="step" id="step2">
+
+        <div class="step-circle">
+            📋
+        </div>
+
+        <div class="step-text">
+            เลือกช่วงเวลาและเก้าอี้
+        </div>
+
+    </div>
+
+
+    <div class="step" id="step3">
+
+        <div class="step-circle">
+            📝
+        </div>
+
+        <div class="step-text">
+            ยืนยันการจอง
+        </div>
+
+    </div>
+
+
+    <div class="step" id="step4">
+
+        <div class="step-circle">
+            ✅
+        </div>
+
+        <div class="step-text">
+            เสร็จสิ้น
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+/* =========================================================
+   STEPPER
+========================================================= */
+
+function setStep(n) {
+
+    const stepper =
+        document.getElementById("bookingStepper");
+
+    if (!stepper) return;
+
+    const icons = [
+        "🗓️",
+        "📋",
+        "📝",
+        "✅"
+    ];
+
+    const steps =
+        stepper.querySelectorAll(".step");
+
+
+    steps.forEach((step, index) => {
+
+        const stepNumber = index + 1;
+
+        const circle =
+            step.querySelector(".step-circle");
+
+
+        /* Active */
+        step.classList.toggle(
+            "active",
+            stepNumber === n
+        );
+
+
+        /* Completed */
+        step.classList.toggle(
+            "completed",
+            stepNumber < n
+        );
+
+
+        /* Icon */
+        if (stepNumber < n) {
+
+            circle.textContent = "✓";
+
+        } else {
+
+            circle.textContent =
+                icons[index];
+
+        }
+
+    });
+
+
+    /* ================================================
+       PROGRESS
+
+       Step 1 = 0%
+       Step 2 = 33.33%
+       Step 3 = 66.66%
+       Step 4 = 100%
+    ================================================= */
+
+    const progress =
+        ((n - 1) / 3) * 100;
+
+    stepper.style.setProperty(
+        "--step-progress",
+        progress + "%"
+    );
+}
+
+/* =========================================================
+   RESET STEPPER
+========================================================= */
+
+function resetStepper() {
+
+    setStep(1);
+
+}
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
+
+setStep(1);
+
+</script>
+
+
 
 <!-- ======================================================
      CALENDAR
@@ -5065,25 +7256,6 @@ function smapRenderRoundCardHtml(round) {
         </div>
     `;
 }
-
-
-async function goBackToMenu() {
-    Swal.fire({
-        title: 'กำลังกลับสู่เมนูหลัก',
-        html: `
-            <div class="lds-wave"><div></div><div></div><div></div><div></div><div></div></div>
-            <p style="margin-top:10px;color:var(--text-muted, #64748b);font-size:13px;">กรุณารอสักครู่...</p>
-        `,
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        customClass: { popup: 'rounded-4 shadow-lg p-3' } // ✅ เพิ่มบรรทัดนี้
-    });
-
-    await new Promise(resolve => setTimeout(resolve, 800));
-    const GITHUB_WRAPPER_URL = 'https://99ak66.github.io/WebappBUpBoostUpLife/';
-    setTimeout(() => { window.top.location.href = GITHUB_WRAPPER_URL; }, 100);
-}
    
 // ฟังก์ชันเปิด-ปิด Dropdown เมื่อกดปุ่ม
 function openHeaderMenu(event) {
@@ -5191,21 +7363,6 @@ function resetSdpAppearance() {
   loadSdpAppearance();
 }
 
-// function sdpNavGoTo(tab){
-//   document.querySelectorAll('.sdp-nav-item').forEach(el=>el.classList.toggle('active', el.dataset.tab===tab));
-//   if (tab==='booking') window.scrollTo({top:0, behavior:'smooth'});
-//   else if (tab==='mybookings') openMyBookingsModal();
-//   else if (tab==='seatmap') openSeatMapModal();
-//   else if (tab==='menu') goBackToMenu();
-
-//   // ปุ่มผังเก้าอี้/การจองของฉันเป็นการเปิด modal ไม่ใช่การเปลี่ยนหน้าค้าง จึงคืนสถานะ active กลับที่ "จองคิว" หลังใช้งาน
-//   if (tab==='mybookings' || tab==='seatmap' || tab==='menu') {
-//     setTimeout(() => {
-//       document.querySelectorAll('.sdp-nav-item').forEach(el=>el.classList.toggle('active', el.dataset.tab==='booking'));
-//     }, 50);
-//   }
-// }
-
 function sdpNavGoTo(tab){
   document.querySelectorAll('.sdp-nav-item').forEach(el=>el.classList.toggle('active', el.dataset.tab===tab));
   if (tab==='booking') window.scrollTo({top:0, behavior:'smooth'});
@@ -5231,7 +7388,23 @@ window.addEventListener('click', function(event) {
     }
 });
 
+async function goBackToMenu() {
+    Swal.fire({
+        title: 'กำลังกลับสู่เมนูหลัก',
+        html: `
+            <div class="lds-wave"><div></div><div></div><div></div><div></div><div></div></div>
+            <p style="margin-top:10px;color:var(--text-muted, #64748b);font-size:13px;">กรุณารอสักครู่...</p>
+        `,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        customClass: { popup: 'rounded-4 shadow-lg p-3' } // ✅ เพิ่มบรรทัดนี้
+    });
 
+    await new Promise(resolve => setTimeout(resolve, 800));
+    const GITHUB_WRAPPER_URL = 'https://99ak66.github.io/WebappBUpBoostUpLife/';
+    setTimeout(() => { window.top.location.href = GITHUB_WRAPPER_URL; }, 100);
+}
 
 </script>
 
